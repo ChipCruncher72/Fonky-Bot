@@ -19,6 +19,7 @@ public class ServerCommands extends ListenerAdapter {
 	public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
 		String command = event.getName();
 		Random random = new Random();
+		// I am aware of switch statements. I'm just too lazy to use them.
 		if (command.equals("info")) {
 			event.reply("Bot was created on the 26th of February 2023\n\nCreated by ChipCruncher72#8376\n\nWith the JDA (https://github.com/DV8FromTheWorld/JDA)").setEphemeral(true).queue();
 		} else if (command.equals("fun-fact")) {
