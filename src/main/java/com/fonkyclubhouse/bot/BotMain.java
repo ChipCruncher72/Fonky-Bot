@@ -1,5 +1,6 @@
 package com.fonkyclubhouse.bot;
 
+import com.fonkyclubhouse.bot.listeners.ServerCommands;
 import com.fonkyclubhouse.bot.listeners.Listener;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
@@ -25,7 +26,7 @@ public class BotMain {
 		sm = builder.build();
 
 		// Initialize the bots hearing
-		sm.addEventListener(new Listener());
+		sm.addEventListener(new Listener(), new ServerCommands());
 	}
 
 	public ShardManager getSm() {

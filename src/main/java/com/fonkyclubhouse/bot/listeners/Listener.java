@@ -13,7 +13,7 @@ public class Listener extends ListenerAdapter {
 	@Override
 	public void onGuildMemberJoin(GuildMemberJoinEvent event) {
 		JDA jda = event.getJDA();
-		event.getGuild().addRoleToMember(event.getMember(), Objects.requireNonNull(jda.getRoleById(/* Your role ID */))).queue();
-		event.getGuild().getChannelById(TextChannel.class, /* In channel ID */).sendMessage("Welcome to the clubhouse " + event.getMember().getAsMention() + "!").queue();
+		event.getGuild().addRoleToMember(event.getMember(), Objects.requireNonNull(jda.getRoleById(/* Your role here */))).queue();
+		event.getGuild().getChannelById(TextChannel.class, /* Your channel here */).sendMessage("Welcome to the clubhouse " + event.getMember().getAsMention() + "!").queue();
 	}
 }
