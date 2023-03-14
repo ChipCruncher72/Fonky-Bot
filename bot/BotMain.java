@@ -17,7 +17,7 @@ public class BotMain {
 	// Initialize bot
 	public BotMain() throws LoginException {
 		String token = /* Bot Token */;
-		DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
+		var builder = DefaultShardManagerBuilder.createDefault(token);
 		builder.setStatus(OnlineStatus.ONLINE);
 		builder.setActivity(Activity.watching("Fonky's server"));
 		//                    Allow the config of members | Allow the bot to read messages
